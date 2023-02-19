@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import TemporaryDrawer from './Components/UI/Sidebar';
+import BoxSx from './Components/UI/Box';
+import Header from './Components/UI/Header';
+import Sidebar from './Components/UI/Sidebar';
 
 function App() {
   return (
     <div className="App">
-      <TemporaryDrawer />
-
+      <Header />
+      <BoxSx/> 
+      
     </div>
   );
 }
