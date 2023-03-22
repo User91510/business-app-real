@@ -7,10 +7,12 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import InfoIcon from '@mui/icons-material/Info';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 type Anchor = 'left'
 
@@ -41,26 +43,27 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Create order', 'Export data'].map((text, index) => (
+        {['Create order'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
+                <li></li>
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <Link to="/CreateOrder"><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {['Info', 'Products', 'Contact'].map((text, index) => (
+        {['Info'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InfoIcon color="primary"/> : <InfoIcon color="primary"/>}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <Link to="/Info"><ListItemText primary={text} ></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
