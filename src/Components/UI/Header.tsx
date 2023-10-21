@@ -12,6 +12,7 @@ import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -28,6 +29,10 @@ export default function MenuAppBar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleProfile = () => {
+
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -87,7 +92,7 @@ export default function MenuAppBar() {
                 onClose={handleClose}
               >
                 
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <Link to="/Settings" style={{ textDecoration: 'none',color: 'inherit' }}><MenuItem onClick={handleProfile}>Profile</MenuItem></Link>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>

@@ -50,7 +50,7 @@ export default function Sidebar() {
                 {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
                 <li></li>
               </ListItemIcon>
-              <Link to="/CreateOrder"><ListItemText primary={text}></ListItemText></Link>
+              <Link to="/CreateOrder" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -63,7 +63,7 @@ export default function Sidebar() {
               <ListItemIcon>
                 {index % 2 === 0 ? <InfoIcon color="primary"/> : <InfoIcon color="primary"/>}
               </ListItemIcon>
-              <Link to="/Info"><ListItemText primary={text} ></ListItemText></Link>
+              <Link to="/Info" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text} ></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -76,7 +76,7 @@ export default function Sidebar() {
                 {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
                 <li></li>
               </ListItemIcon>
-              <Link to="/Reports"><ListItemText primary={text}></ListItemText></Link>
+              <Link to="/Reports" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -89,7 +89,7 @@ export default function Sidebar() {
                 {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
                 <li></li>
               </ListItemIcon>
-              <Link to="/Menu"><ListItemText primary={text}></ListItemText></Link>
+              <Link to="/Menu" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -102,7 +102,7 @@ export default function Sidebar() {
                 {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
                 <li></li>
               </ListItemIcon>
-              <Link to="/Settings"><ListItemText primary={text}></ListItemText></Link>
+              <Link to="/Settings" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -115,7 +115,7 @@ export default function Sidebar() {
                 {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
                 <li></li>
               </ListItemIcon>
-              <Link to="/Catalogs"><ListItemText primary={text}></ListItemText></Link>
+              <Link to="/Catalogs" style={{ textDecoration: 'none',color:'inherit' }}><ListItemText primary={text}></ListItemText></Link>
             </ListItemButton>
           </ListItem>
         ))}

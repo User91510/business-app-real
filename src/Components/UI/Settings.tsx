@@ -5,16 +5,38 @@ import RecipeReviewCard from "./ReviewCard";
 const Settings: React.FC = (props) => {
     return(
         <div>
-      <Box 
-        display="flex" 
-        width={1000} height={800} 
-        bgcolor="lightgreen"
-        alignItems="center"
-        justifyContent="center">
-            <RecipeReviewCard></RecipeReviewCard>
-            <RecipeReviewCard></RecipeReviewCard>
-            <RecipeReviewCard></RecipeReviewCard>
-        </Box>
+            <Box 
+                display="flex" 
+                width={1} height={1500} 
+                bgcolor="primary.main"
+                alignItems="center"
+                justifyContent="center"
+                flexWrap={"wrap"}
+                flexDirection={"column"}
+                >
+                <Box width={1}
+                display="flex" 
+                justifyContent="center"
+                >
+                    <RecipeReviewCard></RecipeReviewCard>
+                    <RecipeReviewCard></RecipeReviewCard>
+                </Box>
+                <Box width={1}
+                display="flex" 
+                justifyContent="center"
+                >
+                    <RecipeReviewCard></RecipeReviewCard>
+                    <RecipeReviewCard></RecipeReviewCard>
+                </Box>
+                <Box width={1}
+                display="flex" 
+                justifyContent="center"
+                >
+                    <RecipeReviewCard></RecipeReviewCard>
+                    <RecipeReviewCard></RecipeReviewCard>
+                </Box>
+
+            </Box>
 
             
        
