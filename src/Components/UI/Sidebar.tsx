@@ -68,6 +68,58 @@ export default function Sidebar() {
           </ListItem>
         ))}
       </List>
+      <List>
+        {['Reports'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
+                <li></li>
+              </ListItemIcon>
+              <Link to="/Reports"><ListItemText primary={text}></ListItemText></Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <List>
+        {['Menu'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
+                <li></li>
+              </ListItemIcon>
+              <Link to="/Menu"><ListItemText primary={text}></ListItemText></Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <List>
+        {['Settings'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
+                <li></li>
+              </ListItemIcon>
+              <Link to="/Settings"><ListItemText primary={text}></ListItemText></Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <List>
+        {['Catalogs'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon color="primary"/> : <MailIcon color="primary"/>}
+                <li></li>
+              </ListItemIcon>
+              <Link to="/Catalogs"><ListItemText primary={text}></ListItemText></Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
     </Box>
   );
 
