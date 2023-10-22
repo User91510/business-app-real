@@ -11,10 +11,10 @@ const Catalogs: React.FC = (props) => {
         bgcolor="lightgreen"
         alignItems="center"
         justifyContent="center">
-            <RecipeReviewCard></RecipeReviewCard>
-            <RecipeReviewCard></RecipeReviewCard>
-            <RecipeReviewCard></RecipeReviewCard>
-        </Box>
+            <RecipeReviewCard type={""}></RecipeReviewCard>
+            <RecipeReviewCard type={""}></RecipeReviewCard>
+            <RecipeReviewCard type={""}></RecipeReviewCard>
+            </Box>
 
             
        

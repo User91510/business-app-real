@@ -8,11 +8,18 @@ import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }
+
+interface RecipeReviewCardProps {
+ type: string,
+ /*
+types: 1. dropdown setting 2. values 
+ */
+} 
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
   const { expand, ...other } = props;
@@ -25,23 +32,26 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
+export default function RecipeReviewCard(props: RecipeReviewCardProps) {
+  const { type } = props;
+  const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card sx={{ maxWidth: 395,minWidth: 395, height: 400, my: 1}}>
-      <CardHeader></CardHeader>
+    type === "values" ?
+    <Card sx={{ maxWidth: 795,minWidth: 795, height: 600, my: 2, mx: 2}}>
+     <CardHeader></CardHeader>
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Personal privacy confirmation 
-        </Typography>
-        <Button variant="outlined">Confirm</Button>
-      </CardContent>
-      <CardActions disableSpacing>
+        <Box display={'flex'} justifyContent={'space-evenly'}>
+          <Typography variant="h5" color="text.primary">
+          Profile</Typography>
+          <Button variant="outlined">Display</Button>
+        </Box>
+        <Box display={'flex'} justifyContent={'flex-start'}>
+        <CardActions disableSpacing>
           <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
@@ -51,19 +61,78 @@ export default function RecipeReviewCard() {
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
+        </Box>
+      </CardContent>
+      
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Privacy confirmation:</Typography>
-          <Typography paragraph>
+          <Typography paragraph color="text.secondary">Username</Typography>
+          <Typography paragraph color="text.secondary">
+          Password
+          </Typography>
+          <Typography paragraph color="text.secondary">
+          Shared data
+          </Typography>
+          <Typography paragraph color="text.secondary">
+          Profile created
+          </Typography>
+          <Typography color="text.secondary">
+          More
+          </Typography>
+        </CardContent>
+      </Collapse>
+     
+     
+     
+      {/* <CardHeader></CardHeader>
+      <CardContent>
+      <Typography variant="h5" color="text.primary">
+        Profile:
+        </Typography>  
+          <Typography paragraph color="text.secondary">Username:</Typography>
+          <Typography paragraph color="text.secondary">Password</Typography>
+          <Typography paragraph color="text.secondary">Shared data</Typography>
+          <Typography paragraph color="text.secondary">Profile created</Typography>
+          <Typography paragraph color="text.secondary">More</Typography>
+        </CardContent> */}
+     
+    </Card>
+    : 
+    <Card sx={{ maxWidth: 795,minWidth: 795, height: 600,  my: 2, mx: 2}}>
+      <CardHeader></CardHeader>
+      <CardContent>
+        <Box display={'flex'} justifyContent={'space-evenly'}>
+          <Typography variant="h5" color="text.primary">
+          Personal privacy confirmation</Typography>
+          <Button variant="outlined">Confirm</Button>
+        </Box>
+        <Box display={'flex'} justifyContent={'flex-start'}>
+        <CardActions disableSpacing>
+          <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+        </Box>
+      </CardContent>
+      
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph color="text.secondary">Privacy confirmation:</Typography>
+          <Typography paragraph color="text.secondary">
             Here you confirm basic privacy confirmations.
           </Typography>
-          <Typography paragraph>
+          <Typography paragraph color="text.secondary">
             Text
           </Typography>
-          <Typography paragraph>
+          <Typography paragraph color="text.secondary">
             More Text
           </Typography>
-          <Typography>
+          <Typography color="text.secondary">
             End text
           </Typography>
         </CardContent>

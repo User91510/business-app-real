@@ -7,35 +7,15 @@ const Settings: React.FC = (props) => {
         <div>
             <Box 
                 display="flex" 
-                width={1} height={1500} 
+                width={1} height={1300} 
                 bgcolor="primary.main"
-                alignItems="center"
                 justifyContent="center"
                 flexWrap={"wrap"}
-                flexDirection={"column"}
+                flexDirection={"row"}
                 >
-                <Box width={1}
-                display="flex" 
-                justifyContent="center"
-                >
-                    <RecipeReviewCard></RecipeReviewCard>
-                    <RecipeReviewCard></RecipeReviewCard>
-                </Box>
-                <Box width={1}
-                display="flex" 
-                justifyContent="center"
-                >
-                    <RecipeReviewCard></RecipeReviewCard>
-                    <RecipeReviewCard></RecipeReviewCard>
-                </Box>
-                <Box width={1}
-                display="flex" 
-                justifyContent="center"
-                >
-                    <RecipeReviewCard></RecipeReviewCard>
-                    <RecipeReviewCard></RecipeReviewCard>
-                </Box>
 
+                    <RecipeReviewCard type={"dropdown setting"}></RecipeReviewCard>
+                    <RecipeReviewCard type={"values"}></RecipeReviewCard>
             </Box>
 
             
