@@ -34,7 +34,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 export default function RecipeReviewCard(props: RecipeReviewCardProps) {
   const { type } = props;
-  const [expanded, setExpanded] = React.useState(true);
+  const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -50,6 +50,22 @@ export default function RecipeReviewCard(props: RecipeReviewCardProps) {
           Profile</Typography>
           <Button variant="outlined">Display</Button>
         </Box>
+        <Typography paragraph color="text.secondary" mt={4}>Username</Typography>
+          <Typography paragraph color="text.secondary">
+          Password
+          </Typography>
+          <Typography paragraph color="text.secondary">
+          Shared data
+          </Typography>
+          <Typography paragraph color="text.secondary">
+          Profile created
+          </Typography>
+          <Typography color="text.secondary">
+          Features
+          </Typography>
+          <Typography color="text.primary" mt={4}>
+          More info
+          </Typography>
         <Box display={'flex'} justifyContent={'flex-start'}>
         <CardActions disableSpacing>
           <ExpandMore
@@ -76,26 +92,8 @@ export default function RecipeReviewCard(props: RecipeReviewCardProps) {
           <Typography paragraph color="text.secondary">
           Profile created
           </Typography>
-          <Typography color="text.secondary">
-          More
-          </Typography>
         </CardContent>
-      </Collapse>
-     
-     
-     
-      {/* <CardHeader></CardHeader>
-      <CardContent>
-      <Typography variant="h5" color="text.primary">
-        Profile:
-        </Typography>  
-          <Typography paragraph color="text.secondary">Username:</Typography>
-          <Typography paragraph color="text.secondary">Password</Typography>
-          <Typography paragraph color="text.secondary">Shared data</Typography>
-          <Typography paragraph color="text.secondary">Profile created</Typography>
-          <Typography paragraph color="text.secondary">More</Typography>
-        </CardContent> */}
-     
+      </Collapse>    
     </Card>
     : 
     <Card sx={{ maxWidth: 795,minWidth: 795, height: 600,  my: 2, mx: 2}}>
@@ -106,6 +104,22 @@ export default function RecipeReviewCard(props: RecipeReviewCardProps) {
           Personal privacy confirmation</Typography>
           <Button variant="outlined">Confirm</Button>
         </Box>
+        <Typography paragraph color="text.secondary" mt={4}>Privacy confirmation:</Typography>
+          <Typography paragraph color="text.secondary">
+            Here you confirm basic privacy confirmations.
+          </Typography>
+          <Typography paragraph color="text.secondary">
+            Text
+          </Typography>
+          <Typography paragraph color="text.secondary">
+            More Text
+          </Typography>
+          <Typography color="text.secondary">
+            End text
+          </Typography>
+          <Typography color="text.primary" mt={4}>
+          More info
+          </Typography>
         <Box display={'flex'} justifyContent={'flex-start'}>
         <CardActions disableSpacing>
           <ExpandMore
@@ -131,9 +145,6 @@ export default function RecipeReviewCard(props: RecipeReviewCardProps) {
           </Typography>
           <Typography paragraph color="text.secondary">
             More Text
-          </Typography>
-          <Typography color="text.secondary">
-            End text
           </Typography>
         </CardContent>
       </Collapse>
