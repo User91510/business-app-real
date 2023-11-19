@@ -1,10 +1,12 @@
 import { Button, Stack } from "@mui/material";
 import React from "react";
+import { useGetReportsDataQuery } from "../../api/ReportsApi";
 
 const Reports: React.FC = (props) => {
+    // const {data /*, isLoading, isSuccess, isError, error*/} = useGetReportsDataQuery();
+    // console.log(data)
 
     const orderSubmit = () => {
-        alert("workin")
     }
 
     return(
