@@ -6,7 +6,8 @@ import { Stack } from '@mui/material';
 export default function ColorTextFields() {
   return (
     
-  <Stack direction="column" alignItems="center" spacing={4} justifyContent="center">
+  <Stack direction="column" alignItems="center" spacing={6} justifyContent="center"
+  >
 
     <Stack direction="row" alignItems="center" spacing={4} justifyContent="center">
       <TextField label="Commodity" color="info" focused />
